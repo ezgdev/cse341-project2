@@ -5,7 +5,7 @@ const doc = {
     title: "To-Do List API",
     description: "API for managing task",
   },
-  host: "localhost:3000",
+  host: "localhost:3001",
   schemes: ["http"],
 };
 
