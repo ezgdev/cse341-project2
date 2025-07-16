@@ -1,0 +1,25 @@
+{
+  "name": "cse341-project2",
+  "version": "1.0.0",
+  "description": "project2",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezgdev/cse341-project2.git"
+  },
+  "author": "Ezequiel Gimenez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezgdev/cse341-project2/issues"
+  },
+  "homepage": "https://github.com/ezgdev/cse341-project2#readme",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0",
+    "nodemon": "^3.1.10"
+  }
+}
