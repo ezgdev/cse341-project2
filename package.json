@@ -1,7 +1,7 @@
 {
   "name": "cse341-project2",
   "version": "1.0.0",
-  "description": "project2",
+  "description": "To-Do List",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js"
@@ -20,6 +20,8 @@
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "mongodb": "^6.17.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   }
 }
