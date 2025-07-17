@@ -5,7 +5,7 @@
     "description": "API for managing task",
     "version": "1.0.0"
   },
-  "host": "cse341-project2-atvw.onrender.com/",
+  "host": "cse341-project2-atvw.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
