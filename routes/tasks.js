@@ -16,7 +16,7 @@ router.get(
 
 router.get(
   "/user/:userId/tasks",
-  validate.tasksIdRules(),
+  validate.tasksByUserIdRules(),
   validate.handleErrors,
   taskController.getTasksByUserId
 ); // get tasks by user ID

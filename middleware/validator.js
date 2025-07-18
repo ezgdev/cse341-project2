@@ -50,6 +50,17 @@ validate.tasksIdRules = () => {
   ];
 };
 
+// Validation rules for getting tasks by user ID
+validate.tasksByUserIdRules = () => {
+  return [
+    param("userId")
+      .notEmpty()
+      .withMessage("User ID is required")
+      .isMongoId()
+      .withMessage("Invalid user ID"),
+  ];
+};
+
 // Middleware to handle validation errors
 validate.handleErrors = (req, res, next) => {
   const errors = validationResult(req);
