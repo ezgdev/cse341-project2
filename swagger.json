@@ -2,13 +2,13 @@
   "swagger": "2.0",
   "info": {
     "title": "To-Do List API",
-    "description": "API for managing tasks",
+    "description": "API for managing task",
     "version": "1.0.0"
   },
-  "host": "cse341-project2-atvw.onrender.com",
+  "host": "localhost:3001",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/users/": {
@@ -296,6 +296,9 @@
                   "example": "any"
                 },
                 "dueDate": {
+                  "example": "any"
+                },
+                "userId": {
                   "example": "any"
                 }
               }
