@@ -1,0 +1,56 @@
+// LOCALHOST
+### Get All Users
+GET http://localhost:3001/users
+
+### Get User by ID
+GET http://localhost:3001/users/68770e45a97fb095bf04a572
+
+### Create a New User
+POST http://localhost:3001/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Ezequiel",
+  "email": "test@test.com.ar"
+}
+
+### Update User by ID
+PUT http://localhost:3001/users/6877265b6245d26f064497e8 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Ezequiel2",
+  "email": "test@test.com.ar"
+}
+
+### Delete User by ID
+DELETE http://localhost:3001/users/6877265b6245d26f064497e8 HTTP/1.1
+
+
+// RENDER
+### Get All Users
+GET https://cse341-project2-atvw.onrender.com/users
+
+### Get User by ID
+GET https://cse341-project2-atvw.onrender.com/users/68770e45a97fb095bf04a572
+
+### Create a New User
+POST https://cse341-project2-atvw.onrender.com/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Ezequiel2",
+  "email": "test@test.com.ar"
+}
+
+### Update User by ID
+PUT https://cse341-project2-atvw.onrender.com/users/6879808c66a9cbdf1f4cb70f HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Ezequiel3",
+  "email": "test@test.com.ar"
+}
+
+### Delete User by ID
+DELETE https://cse341-project2-atvw.onrender.com/users/6879808c66a9cbdf1f4cb70f HTTP/1.1

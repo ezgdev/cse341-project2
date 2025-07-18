@@ -1,0 +1,78 @@
+// LOCALHOST
+### Get All Tasks
+GET http://localhost:3001/tasks
+
+### Get Tasks by ID
+GET http://localhost:3001/tasks/6879805566a9cbdf1f4cb70d
+
+### Get Tasks by User ID
+GET http://localhost:3001/tasks/user/68770e45a97fb095bf04a572/tasks
+
+### Create a New Task
+POST http://localhost:3001/tasks HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "task1",
+  "description": "task1 description",
+  "status": "in-progress",
+  "priority": "high",
+  "dueDate": "2023-10-01",
+  "userId": "68770e45a97fb095bf04a572"
+}
+
+### Update Tasks by ID
+PUT http://localhost:3001/tasks/6879805566a9cbdf1f4cb70d HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "task1",
+  "description": "task1 description",
+  "status": "in-progress",
+  "priority": "high",
+  "dueDate": "2023-10-01",
+  "userId": "68770e45a97fb095bf04a572"
+}
+
+### Delete Tasks by ID
+DELETE http://localhost:3001/tasks/6879805566a9cbdf1f4cb70d HTTP/1.1
+
+
+// RENDER
+### Get All Tasks
+GET https://cse341-project2-atvw.onrender.com/tasks
+
+### Get Tasks by ID
+GET https://cse341-project2-atvw.onrender.com/tasks/6879805566a9cbdf1f4cb70d
+
+### Get Tasks by User ID
+GET https://cse341-project2-atvw.onrender.com/tasks/user/68770e45a97fb095bf04a572/tasks
+
+### Create a New Task
+POST https://cse341-project2-atvw.onrender.com/tasks HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "task1",
+  "description": "task1 description",
+  "status": "in-progress",
+  "priority": "high",
+  "dueDate": "2023-10-01",
+  "userId": "68770e45a97fb095bf04a572"
+}
+
+### Update Tasks by ID
+PUT https://cse341-project2-atvw.onrender.com/tasks/6879805566a9cbdf1f4cb70d HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "task1",
+  "description": "task1 description",
+  "status": "in-progress",
+  "priority": "high",
+  "dueDate": "2023-10-01",
+  "userId": "68770e45a97fb095bf04a572"
+}
+
+### Delete Tasks by ID
+DELETE https://cse341-project2-atvw.onrender.com/tasks/6879805566a9cbdf1f4cb70d HTTP/1.1
