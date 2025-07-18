@@ -85,6 +85,7 @@ const updateTask = async (req, res) => {
       status: req.body.status,
       priority: req.body.priority,
       dueDate: req.body.dueDate,
+      userId: new ObjectId(req.body.userId),
     };
 
     const result = await mongodb
