@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const validate = require("../middleware/validator");
-
 const taskController = require("../controllers/tasks");
+const { isAuthenticated } = require("../middleware/authenticate");
 
 // // Define routes for task-related operations
 router.get("/", validate.tasksIdRules(), taskController.getAllTasks);
@@ -23,6 +23,7 @@ router.get(
 
 router.post(
   "/",
+  isAuthenticated,
   validate.tasksRules(),
   validate.handleErrors,
   taskController.createTask
@@ -30,6 +31,7 @@ router.post(
 
 router.put(
   "/:id",
+  isAuthenticated,
   validate.tasksRules(),
   validate.tasksIdRules(),
   validate.handleErrors,
@@ -38,6 +40,7 @@ router.put(
 
 router.delete(
   "/:id",
+  isAuthenticated,
   validate.tasksIdRules(),
   validate.handleErrors,
   taskController.deleteTask

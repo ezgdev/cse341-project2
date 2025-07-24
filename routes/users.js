@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const validate = require("../middleware/validator");
-
 const usersController = require("../controllers/users");
+const { isAuthenticated } = require("../middleware/authenticate");
 
 // Define routes for user-related operations
 router.get("/", validate.usersIdRules(), usersController.getAllUsers);
@@ -16,6 +16,7 @@ router.get(
 
 router.post(
   "/",
+  isAuthenticated,
   validate.usersRules(),
   validate.handleErrors,
   usersController.createUser
@@ -23,6 +24,7 @@ router.post(
 
 router.put(
   "/:id",
+  isAuthenticated,
   validate.usersRules(),
   validate.usersIdRules(),
   validate.handleErrors,
@@ -31,6 +33,7 @@ router.put(
 
 router.delete(
   "/:id",
+  isAuthenticated,
   validate.usersIdRules(),
   validate.handleErrors,
   usersController.deleteUser
