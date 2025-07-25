@@ -2,11 +2,13 @@ const router = require("express").Router();
 const passport = require("passport");
 
 router.use("/", require("./swagger"));
+router.use("/users", require("./users"));
+router.use("/tasks", require("./tasks"));
 
-router.get("/", (req, res) => {
-  //#swagger.tags = ['Home']
-  res.send("To-Do List API");
-});
+// router.get("/", (req, res) => {
+//   //#swagger.tags = ['Home']
+//   res.send("To-Do List API");
+// });
 
 router.get("/login", passport.authenticate("github"), (req, res) => {});
 
