@@ -5,7 +5,10 @@ const usersController = require("../controllers/users");
 const { isAuthenticated } = require("../middleware/authenticate");
 
 // Define routes for user-related operations
-router.get("/", validate.usersIdRules(), usersController.getAllUsers);
+router.get("/",
+  validate.usersIdRules(),
+  usersController.getAllUsers
+);
 
 router.get(
   "/:id",

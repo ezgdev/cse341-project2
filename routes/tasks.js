@@ -5,7 +5,10 @@ const taskController = require("../controllers/tasks");
 const { isAuthenticated } = require("../middleware/authenticate");
 
 // // Define routes for task-related operations
-router.get("/", validate.tasksIdRules(), taskController.getAllTasks);
+router.get("/",
+  validate.tasksIdRules(),
+  taskController.getAllTasks
+);
 
 router.get(
   "/:id",

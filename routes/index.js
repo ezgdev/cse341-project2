@@ -10,18 +10,15 @@ router.use("/tasks", require("./tasks"));
 //   res.send("To-Do List API");
 // });
 
-router.get("/login", passport.authenticate("github"), (req, res) => {});
+router.get('/login', passport.authenticate('github'), (req, res) => {});
 
 router.get("/logout", function (req, res, next) {
   req.logout(function (err) {
     if (err) {
       return next(err);
     }
-    res.redirect("/");
+    res.redirect('/');
   });
 });
-
-router.use("/users", require("./users"));
-router.use("/tasks", require("./tasks"));
 
 module.exports = router;

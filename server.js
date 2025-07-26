@@ -7,7 +7,7 @@ const session = require("express-session");
 const GithubStrategy = require("passport-github").Strategy;
 const cors = require("cors");
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 app
   .use(bodyParser.json())
@@ -37,7 +37,7 @@ app
   })
   .use(cors({ methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"] }))
   .use(cors({ origin: "*" }))
-  .use("/", require("./routes"));
+  .use("/", require("./routes/index.js"));
 
 passport.use(
   new GithubStrategy(
@@ -47,7 +47,7 @@ passport.use(
       callbackURL: process.env.GITHUB_CALLBACK_URL,
     },
     (accessToken, refreshToken, profile, done) => {
-      // User.findOrCreate({ githubId: profile.id }, (err, user) => {
+      // User.findOrCreate({ githubId: profile.id }, function (err, user){
       return done(null, profile);
       // });
     }
@@ -63,24 +63,16 @@ passport.deserializeUser((user, done) => {
 });
 
 app.get("/", (req, res) => {
-  res.send(
-    req.session.user !== undefined
-      ? `Logged in as ${req.session.user.displayname}`
-      : "Logged Out"
-  );
-});
+  res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayname}`: "Logged Out" )});
 
 app.get(
-  "/github/callback",
-  passport.authenticate("github", {
-    failureRedirect: "/api-docs",
-    session: true,
-  }),
+  '/github/callback',
+  passport.authenticate('github', {
+    failureRedirect: '/api-docs', session: false}),
   (req, res) => {
-    // Successful authentication, redirect home.
-    res.redirect("/");
-  }
-);
+    req.session.user = req.user;
+    res.redirect('/');
+  });
 
 mongodb.initDb((err) => {
   if (err) {

@@ -5,42 +5,12 @@
     "description": "API for managing task",
     "version": "1.0.0"
   },
-  "host": "cse341-project2-atvw.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
-    "/login": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/logout": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/users/": {
       "get": {
         "tags": [
@@ -85,9 +55,6 @@
           "201": {
             "description": "Created"
           },
-          "400": {
-            "description": "Bad Request"
-          },
           "401": {
             "description": "Unauthorized"
           },
@@ -117,9 +84,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "404": {
             "description": "Not Found"
@@ -161,9 +125,6 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "Bad Request"
-          },
           "401": {
             "description": "Unauthorized"
           },
@@ -191,9 +152,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -263,9 +221,6 @@
           "201": {
             "description": "Created"
           },
-          "400": {
-            "description": "Bad Request"
-          },
           "401": {
             "description": "Unauthorized"
           },
@@ -295,9 +250,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "404": {
             "description": "Not Found"
@@ -351,9 +303,6 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "Bad Request"
-          },
           "401": {
             "description": "Unauthorized"
           },
@@ -381,9 +330,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -417,9 +363,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"

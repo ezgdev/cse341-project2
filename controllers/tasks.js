@@ -63,7 +63,7 @@ const createTask = async (req, res) => {
 
     if (result.acknowledged) {
       res
-        .status(201)
+        .status(201).json(result)
         .send({ message: "Task created successfully", id: result.insertedId });
     } else {
       res.status(500).json({ message: "Failed to create task" });
